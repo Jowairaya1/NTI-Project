@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Accessories E-Commerce - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Home.html">Accessories Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-product.html">Add Product</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i> Cart (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="LogoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="all-products py-5">
+        <div class="button container text-center">
+ 
+            <div class="section-header">
+                <h2>All Products</h2>
+                <span class="badge bg-dark">Total: <span id="productCount">0</span> products</span>
+            </div>
+            
+            <div class="row" id="productsContainer">
+            </div>
+            
+            <div id="noProductsMessage" class="text-center py-5 no-products-message">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="text-muted">No products available</h4>
+                        <p class="text-muted">Add some products to get started!</p>
+                        <a href="add-product.html" class="btn btn-primary">Add Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="products-hero-section">
+        <div class="container">
+          
+            <div class="row align-items-center min-vh-100">
+                
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="text-center mb-4">
+                        </div>
+                       
+                        <h1 class="hero-title"><i>Golden Dreams </i></h1>
+                        <p class="hero-subtitle"> <i>A perfect piece for any occasion</i></p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                       <img src="images/about6.jpg" width="400px"  alt="Featured Product" class="img-fluid " 
+                    
+                 
+                    </div>
+                 </div>
+               </div>    
+              </div>
+    </section>
+   
+    
+
+    <footer class="footer-pink py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="footer-image mb-4">
+                          <img src="images/necklace.jpg" alt="Necklace" class="img-fluid rounded mb-4" style="width: 200px; height: 200px;">
+                    </div>
+                    <div class="social-icons mb-4">
+                        <a href="#" class="social-icon me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-google-play"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="copyright-text mb-0">&copy; 2021 . ALL RIGHT RESERVED BY COLORLIB</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

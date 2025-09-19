@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Accessories E-Commerce - Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Home.html">Accessories Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="add-product.html">Add Product</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i> Cart (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="LogoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-add shadow-lg">
+                        <div class="card-body p-5">
+                            <h2 class="card-title text-center text-muted mb-4"><i>Product Information </i></h2>
+                            
+                            <form id="addProductForm">
+                                <div class="mb-3">
+                                    <label for="productName" class="form-label">
+                                        <i class="fas fa-tag form-icon"></i>Product Name *
+                                    </label>
+                                    <input type="text" class="form-control" id="productName" required 
+                                           placeholder="Enter product name">
+                                    <div class="invalid-feedback" id="nameError">
+                                        Please provide a valid product name.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="productPrice" class="form-label">
+                                        <i class="fas fa-dollar-sign form-icon"></i>Price *
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="productPrice" required 
+                                               step="0.01" min="0" placeholder="0.00">
+                                    </div>
+                                    <div class="invalid-feedback" id="priceError">
+                                        Please provide a valid price (greater than 0).
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="productImage" class="form-label">
+                                        <i class="fas fa-image form-icon"></i>Image URL
+                                    </label>
+                                    <input type="url" class="form-control" id="productImage" 
+                                           placeholder="https://example.com/image.jpg">
+                                    <div class="form-text">Leave empty to use default image</div>
+                                    <div class="invalid-feedback" id="imageError">
+                                        Please provide a valid image URL.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="productDescription" class="form-label">
+                                        <i class="fas fa-align-left form-icon"></i>Description
+                                    </label>
+                                    <textarea class="form-control" id="productDescription" rows="3" 
+                                              placeholder="Enter product description (optional)"></textarea>
+                                </div>
+                                
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-outline-secondary bg-dark text-white  me-md-2" onclick="clearForm()">
+                                        Clear Form
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-plus-circle"></i> Add Product
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-pink py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="footer-image mb-4">
+                            <img src="images/necklace.jpg" alt="Necklace" class="img-fluid rounded mb-4" style="width: 200px; height: 200px;">
+                    </div>
+                    <div class="social-icons mb-4">
+                        <a href="#" class="social-icon me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="fab fa-google-play"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="copyright-text mb-0">&copy; 2021 . ALL RIGHT RESERVED BY COLORLIB</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
